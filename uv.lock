@@ -246,23 +246,23 @@ name = "spm"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "pytest" },
     { name = "slangpy" },
 ]
 
 [package.dev-dependencies]
 dev = [
     { name = "black" },
+    { name = "pytest" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "slangpy", specifier = ">=0.40.1" },
-]
+requires-dist = [{ name = "slangpy", specifier = ">=0.40.1" }]
 
 [package.metadata.requires-dev]
-dev = [{ name = "black", specifier = ">=26.3.1" }]
+dev = [
+    { name = "black", specifier = ">=26.3.1" },
+    { name = "pytest", specifier = ">=9.0.3" },
+]
 
 [[package]]
 name = "typing-extensions"
