@@ -5,6 +5,7 @@ description = "Slang package manager"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "pytest>=9.0.3",
     "slangpy>=0.40.1",
 ]
 
