@@ -80,6 +80,22 @@ class SlangPackageManager:
                 f"Built package '{package_cls.name()}' and stored module in module map"
             )
 
+    @property
+    def device(self) -> spy.Device:
+        """Get the Slang device used by this package manager.
+
+        :return: The Slang device instance.
+        """
+        return self._device
+
+    @property
+    def module_map(self) -> Dict[str, spy.Module]:
+        """Get the module map containing the built Slang modules for each registered package.
+
+        :return: A dictionary mapping package names to their corresponding Slang modules.
+        """
+        return self._module_map
+
     @staticmethod
     def register_package(package_cls: type[SlangPackage]) -> None:
         """Register a Slang package class.
