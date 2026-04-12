@@ -1,3 +1,3 @@
-# spm
+# spm.slang
 
 Slang package manager
