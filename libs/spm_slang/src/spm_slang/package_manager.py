@@ -4,7 +4,7 @@ from collections import deque
 import slangpy as spy
 from slangpy.core.utils import BindlessDesc, NativeHandle, PathLike
 
-from spm.package import SlangPackage
+from spm_slang.package import SlangPackage
 
 logger = logging.getLogger(__name__)
 

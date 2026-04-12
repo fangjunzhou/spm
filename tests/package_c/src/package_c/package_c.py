@@ -1,8 +1,8 @@
 from pathlib import Path
 import slangpy as spy
 
-from spm.package import SlangPackage
-from spm.package_manager import SlangPackageManager
+from spm_slang.package import SlangPackage
+from spm_slang.package_manager import SlangPackageManager
 from package_a.package_a import PackageA
 from package_b.package_b import PackageB
 

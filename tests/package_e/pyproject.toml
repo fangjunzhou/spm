@@ -3,9 +3,7 @@ name = "package-e"
 version = "0.1.0"
 description = "Slang test fixture package E"
 requires-python = ">=3.12"
-dependencies = [
-    "spm",
-]
+dependencies = ["spm-slang"]
 
 [build-system]
 requires = ["hatchling"]

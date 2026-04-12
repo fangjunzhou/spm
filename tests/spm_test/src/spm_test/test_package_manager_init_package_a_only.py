@@ -1,6 +1,6 @@
 import logging
 
-from spm.package_manager import SlangPackageManager, packages
+from spm_slang.package_manager import SlangPackageManager, packages
 from package_a.package_a import PackageA
 
 logger = logging.getLogger(__name__)

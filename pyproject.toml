@@ -5,7 +5,7 @@ description = "Slang package manager"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "spm",
+    "spm-slang",
     "spm-test",
     "package-a",
     "package-b",
@@ -18,7 +18,7 @@ dependencies = [
 members = ["libs/*", "tests/*"]
 
 [tool.uv.sources]
-spm = { workspace = true }
+spm-slang = { workspace = true }
 spm-test = { workspace = true }
 package-a = { workspace = true }
 package-b = { workspace = true }
@@ -27,9 +27,4 @@ package-e = { workspace = true }
 package-f = { workspace = true }
 
 [dependency-groups]
-dev = [
-    "black>=26.3.1",
-    "build>=1.4.3",
-    "pytest>=9.0.3",
-    "twine>=6.2.0",
-]
+dev = ["black>=26.3.1", "build>=1.4.3", "pytest>=9.0.3", "twine>=6.2.0"]

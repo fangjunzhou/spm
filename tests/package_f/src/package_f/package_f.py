@@ -1,8 +1,8 @@
 from pathlib import Path
 import slangpy as spy
 
-from spm.package import SlangPackage
-from spm.package_manager import SlangPackageManager
+from spm_slang.package import SlangPackage
+from spm_slang.package_manager import SlangPackageManager
 
 SHADER_PATH = Path(__file__).parent / "slang"
 

@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from spm.package_manager import SlangPackageManager, packages
+from spm_slang.package_manager import SlangPackageManager, packages
 
 logger = logging.getLogger(__name__)
 

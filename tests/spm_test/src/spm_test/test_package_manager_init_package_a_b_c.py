@@ -1,6 +1,6 @@
 import logging
 
-from spm.package_manager import SlangPackageManager, packages
+from spm_slang.package_manager import SlangPackageManager, packages
 from package_a.package_a import PackageA
 from package_b.package_b import PackageB
 from package_c.package_c import PackageC

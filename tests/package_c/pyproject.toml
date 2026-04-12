@@ -3,11 +3,7 @@ name = "package-c"
 version = "0.1.0"
 description = "Slang test fixture package C"
 requires-python = ">=3.12"
-dependencies = [
-    "spm",
-    "package-a",
-    "package-b",
-]
+dependencies = ["spm-slang", "package-a", "package-b"]
 
 [build-system]
 requires = ["hatchling"]

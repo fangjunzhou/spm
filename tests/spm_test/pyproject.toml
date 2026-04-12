@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Unit tests for spm"
 requires-python = ">=3.12"
 dependencies = [
-    "spm",
+    "spm-slang",
     "package-a",
     "package-b",
     "package-c",

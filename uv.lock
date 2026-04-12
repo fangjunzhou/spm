@@ -9,7 +9,7 @@ members = [
     "package-c",
     "package-e",
     "package-f",
-    "spm",
+    "spm-slang",
     "spm-test",
     "spm-workspace",
 ]
@@ -467,11 +467,11 @@ name = "package-a"
 version = "0.1.0"
 source = { editable = "tests/package_a" }
 dependencies = [
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "spm", editable = "libs/spm" }]
+requires-dist = [{ name = "spm-slang", editable = "libs/spm_slang" }]
 
 [[package]]
 name = "package-b"
@@ -479,13 +479,13 @@ version = "0.1.0"
 source = { editable = "tests/package_b" }
 dependencies = [
     { name = "package-a" },
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "package-a", editable = "tests/package_a" },
-    { name = "spm", editable = "libs/spm" },
+    { name = "spm-slang", editable = "libs/spm_slang" },
 ]
 
 [[package]]
@@ -495,14 +495,14 @@ source = { editable = "tests/package_c" }
 dependencies = [
     { name = "package-a" },
     { name = "package-b" },
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "package-a", editable = "tests/package_a" },
     { name = "package-b", editable = "tests/package_b" },
-    { name = "spm", editable = "libs/spm" },
+    { name = "spm-slang", editable = "libs/spm_slang" },
 ]
 
 [[package]]
@@ -510,22 +510,22 @@ name = "package-e"
 version = "0.1.0"
 source = { editable = "tests/package_e" }
 dependencies = [
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "spm", editable = "libs/spm" }]
+requires-dist = [{ name = "spm-slang", editable = "libs/spm_slang" }]
 
 [[package]]
 name = "package-f"
 version = "0.1.0"
 source = { editable = "tests/package_f" }
 dependencies = [
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "spm", editable = "libs/spm" }]
+requires-dist = [{ name = "spm-slang", editable = "libs/spm_slang" }]
 
 [[package]]
 name = "packaging"
@@ -738,9 +738,9 @@ wheels = [
 ]
 
 [[package]]
-name = "spm"
+name = "spm-slang"
 version = "0.1.0"
-source = { editable = "libs/spm" }
+source = { editable = "libs/spm_slang" }
 dependencies = [
     { name = "slangpy" },
 ]
@@ -759,7 +759,7 @@ dependencies = [
     { name = "package-e" },
     { name = "package-f" },
     { name = "pytest" },
-    { name = "spm" },
+    { name = "spm-slang" },
 ]
 
 [package.metadata]
@@ -770,7 +770,7 @@ requires-dist = [
     { name = "package-e", editable = "tests/package_e" },
     { name = "package-f", editable = "tests/package_f" },
     { name = "pytest", specifier = ">=9.0.3" },
-    { name = "spm", editable = "libs/spm" },
+    { name = "spm-slang", editable = "libs/spm_slang" },
 ]
 
 [[package]]
@@ -783,7 +783,7 @@ dependencies = [
     { name = "package-c" },
     { name = "package-e" },
     { name = "package-f" },
-    { name = "spm" },
+    { name = "spm-slang" },
     { name = "spm-test" },
 ]
 
@@ -802,7 +802,7 @@ requires-dist = [
     { name = "package-c", editable = "tests/package_c" },
     { name = "package-e", editable = "tests/package_e" },
     { name = "package-f", editable = "tests/package_f" },
-    { name = "spm", editable = "libs/spm" },
+    { name = "spm-slang", editable = "libs/spm_slang" },
     { name = "spm-test", editable = "tests/spm_test" },
 ]
 
