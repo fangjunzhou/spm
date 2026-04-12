@@ -1,16 +1,30 @@
 [project]
-name = "spm"
+name = "spm-workspace"
 version = "0.1.0"
 description = "Slang package manager"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "slangpy>=0.40.1",
+    "spm",
+    "spm-test",
+    "package-a",
+    "package-b",
+    "package-c",
+    "package-e",
+    "package-f",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.uv.workspace]
+members = ["libs/*", "tests/*"]
+
+[tool.uv.sources]
+spm = { workspace = true }
+spm-test = { workspace = true }
+package-a = { workspace = true }
+package-b = { workspace = true }
+package-c = { workspace = true }
+package-e = { workspace = true }
+package-f = { workspace = true }
 
 [dependency-groups]
 dev = [

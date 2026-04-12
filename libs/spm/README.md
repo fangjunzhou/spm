@@ -1,0 +1,3 @@
+# spm
+
+Slang package manager.

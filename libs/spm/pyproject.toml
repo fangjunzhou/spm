@@ -1,0 +1,13 @@
+[project]
+name = "spm"
+version = "0.1.0"
+description = "Slang package manager"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "slangpy>=0.40.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

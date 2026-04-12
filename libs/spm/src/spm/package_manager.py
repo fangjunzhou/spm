@@ -147,6 +147,10 @@ class SlangPackageManager:
 
         # Check for cycles (if sorted_packages doesn't contain all packages, there is a cycle)
         if len(sorted_packages) != n:
+            logger.error(
+                "Cyclic dependency detected among packages. Registered packages: %s",
+                list(packages.keys()),
+            )
             raise ValueError("Cyclic dependency detected among packages.")
 
         return sorted_packages

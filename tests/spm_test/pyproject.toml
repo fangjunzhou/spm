@@ -1,0 +1,18 @@
+[project]
+name = "spm-test"
+version = "0.1.0"
+description = "Unit tests for spm"
+requires-python = ">=3.12"
+dependencies = [
+    "spm",
+    "package-a",
+    "package-b",
+    "package-c",
+    "package-e",
+    "package-f",
+    "pytest>=9.0.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -2,6 +2,18 @@ version = 1
 revision = 3
 requires-python = ">=3.12"
 
+[manifest]
+members = [
+    "package-a",
+    "package-b",
+    "package-c",
+    "package-e",
+    "package-f",
+    "spm",
+    "spm-test",
+    "spm-workspace",
+]
+
 [[package]]
 name = "black"
 version = "26.3.1"
@@ -135,6 +147,71 @@ wheels = [
 ]
 
 [[package]]
+name = "package-a"
+version = "0.1.0"
+source = { editable = "tests/package_a" }
+dependencies = [
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "spm", editable = "libs/spm" }]
+
+[[package]]
+name = "package-b"
+version = "0.1.0"
+source = { editable = "tests/package_b" }
+dependencies = [
+    { name = "package-a" },
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "package-a", editable = "tests/package_a" },
+    { name = "spm", editable = "libs/spm" },
+]
+
+[[package]]
+name = "package-c"
+version = "0.1.0"
+source = { editable = "tests/package_c" }
+dependencies = [
+    { name = "package-a" },
+    { name = "package-b" },
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "package-a", editable = "tests/package_a" },
+    { name = "package-b", editable = "tests/package_b" },
+    { name = "spm", editable = "libs/spm" },
+]
+
+[[package]]
+name = "package-e"
+version = "0.1.0"
+source = { editable = "tests/package_e" }
+dependencies = [
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "spm", editable = "libs/spm" }]
+
+[[package]]
+name = "package-f"
+version = "0.1.0"
+source = { editable = "tests/package_f" }
+dependencies = [
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "spm", editable = "libs/spm" }]
+
+[[package]]
 name = "packaging"
 version = "26.0"
 source = { registry = "https://pypi.org/simple" }
@@ -244,9 +321,51 @@ wheels = [
 [[package]]
 name = "spm"
 version = "0.1.0"
-source = { editable = "." }
+source = { editable = "libs/spm" }
 dependencies = [
     { name = "slangpy" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "slangpy", specifier = ">=0.40.1" }]
+
+[[package]]
+name = "spm-test"
+version = "0.1.0"
+source = { editable = "tests/spm_test" }
+dependencies = [
+    { name = "package-a" },
+    { name = "package-b" },
+    { name = "package-c" },
+    { name = "package-e" },
+    { name = "package-f" },
+    { name = "pytest" },
+    { name = "spm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "package-a", editable = "tests/package_a" },
+    { name = "package-b", editable = "tests/package_b" },
+    { name = "package-c", editable = "tests/package_c" },
+    { name = "package-e", editable = "tests/package_e" },
+    { name = "package-f", editable = "tests/package_f" },
+    { name = "pytest", specifier = ">=9.0.3" },
+    { name = "spm", editable = "libs/spm" },
+]
+
+[[package]]
+name = "spm-workspace"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "package-a" },
+    { name = "package-b" },
+    { name = "package-c" },
+    { name = "package-e" },
+    { name = "package-f" },
+    { name = "spm" },
+    { name = "spm-test" },
 ]
 
 [package.dev-dependencies]
@@ -256,7 +375,15 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "slangpy", specifier = ">=0.40.1" }]
+requires-dist = [
+    { name = "package-a", editable = "tests/package_a" },
+    { name = "package-b", editable = "tests/package_b" },
+    { name = "package-c", editable = "tests/package_c" },
+    { name = "package-e", editable = "tests/package_e" },
+    { name = "package-f", editable = "tests/package_f" },
+    { name = "spm", editable = "libs/spm" },
+    { name = "spm-test", editable = "tests/spm_test" },
+]
 
 [package.metadata.requires-dev]
 dev = [
