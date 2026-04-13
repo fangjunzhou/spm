@@ -11,12 +11,13 @@
 ## Environment Setup
 - Recommended: use `uv` and the workspace config in `pyproject.toml`
 - Create venv: `uv venv` (creates `.venv` in repo root)
-- Install workspace deps: `uv sync --all-extras --dev`
+- Install workspace deps: `uv sync --all-groups`
 - Activate venv: `source .venv/bin/activate`
 
 ## Build Commands
 - Build workspace sdist/wheel: `uv run python -m build`
 - Build a single package (example): `uv run python -m build libs/spm_slang`
+- Build documentation: `uv run sphinx -b html docs docs/_build/html`
 - Publish dry-run: `uv run python -m twine check dist/*`
 
 ## Lint / Format Commands
