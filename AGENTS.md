@@ -17,7 +17,7 @@
 ## Build Commands
 - Build workspace sdist/wheel: `uv run python -m build`
 - Build a single package (example): `uv run python -m build libs/spm_slang`
-- Build documentation: `uv run sphinx -b html docs docs/_build/html`
+- Build documentation: `uv run python -m sphinx -b html docs docs/_build/html`
 - Publish dry-run: `uv run python -m twine check dist/*`
 
 ## Lint / Format Commands
