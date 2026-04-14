@@ -1,0 +1,13 @@
+OpenCode Configuration Distribution
+====================================
+
+Variant: python
+Version: 1.0.0
+Built: 2026-04-14T09:13:08Z
+Build System: GitHub Actions
+
+For installation and usage, visit:
+https://fangjunzhou.github.io/opencode-config/distributions/
+
+Quick Start:
+curl -fsSL https://fangjunzhou.github.io/opencode-config/distributions/opencode-python.tar.gz | tar xz
