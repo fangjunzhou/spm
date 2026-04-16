@@ -5,7 +5,7 @@ authors = [{ name = "Fangjun Zhou", email = "fangjun.zhou02@gmail.com" }]
 description = "Slang package manager"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["slangpy>=0.40.1"]
+dependencies = ["slangpy>=0.41.0"]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
 
