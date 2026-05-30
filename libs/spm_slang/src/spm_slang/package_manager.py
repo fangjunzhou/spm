@@ -1,3 +1,4 @@
+import os
 from typing import Dict, List, Optional, Sequence, TypedDict, Union
 import logging
 from collections import deque
@@ -25,8 +26,15 @@ class DeviceConfiguration(TypedDict, total=False):
     bindless_options: Optional[BindlessDesc]
 
 
+DEFAULT_DEVICE_MAP = {
+    "windows": spy.DeviceType.vulkan,
+    "linux": spy.DeviceType.vulkan,
+    "darwin": spy.DeviceType.metal,
+}
+
+
 DEFAULT_DEVICE_CONFIGURATION: DeviceConfiguration = {
-    "type": spy.DeviceType.automatic,
+    "type": DEFAULT_DEVICE_MAP.get(os.name, spy.DeviceType.vulkan),
     "enable_debug_layers": False,
     "adapter_luid": None,
     "include_paths": [],
