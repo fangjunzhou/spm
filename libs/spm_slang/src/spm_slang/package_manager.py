@@ -1,4 +1,4 @@
-import os
+import platform
 from typing import Dict, List, Optional, Sequence, TypedDict, Union
 import logging
 from collections import deque
@@ -27,14 +27,14 @@ class DeviceConfiguration(TypedDict, total=False):
 
 
 DEFAULT_DEVICE_MAP = {
-    "windows": spy.DeviceType.vulkan,
-    "linux": spy.DeviceType.vulkan,
-    "darwin": spy.DeviceType.metal,
+    "Windows": spy.DeviceType.vulkan,
+    "Linux": spy.DeviceType.vulkan,
+    "Darwin": spy.DeviceType.metal,
 }
 
 
 DEFAULT_DEVICE_CONFIGURATION: DeviceConfiguration = {
-    "type": DEFAULT_DEVICE_MAP.get(os.name, spy.DeviceType.vulkan),
+    "type": DEFAULT_DEVICE_MAP.get(platform.system(), spy.DeviceType.vulkan),
     "enable_debug_layers": False,
     "adapter_luid": None,
     "include_paths": [],
